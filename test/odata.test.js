@@ -1,3 +1,4 @@
+const { observableToAsyncIterable } = require('@graphql-tools/utils')
 const cds = require('@sap/cds/lib')
 const { GET, POST, PATCH, axios, expect } = cds.test(__dirname+'/..')
 const EDIT = (url) => POST (url+'/TravelService.draftEdit',{})
@@ -5,6 +6,13 @@ const SAVE = (url) => POST (url+'/TravelService.draftActivate')
 axios.defaults.headers['content-type'] = 'application/json;IEEE754Compatible=true' // REVISIT: can be removed when @sap/cds 5.1.5 is released?
 axios.defaults.auth = { username: 'alice', password: 'admin' }
 
+const { add } = require('../index');
+
+describe('test index', () => {
+  test('add', () =>{
+    expect(add(1,2).toBe(4));
+  })
+})
 describe ("Basic Querying", () => {
 
   it ("should read from row references", async()=>{

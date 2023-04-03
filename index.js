@@ -1,2 +1,5 @@
-console.log("test husky");
-console.table("test");
+function add(a,b){
+    return a + b; 
+}
+
+module.exports  = {add};
