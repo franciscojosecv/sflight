@@ -10,7 +10,7 @@ const { add } = require('../index');
 
 describe('test index', () => {
   test('add', () =>{
-    expect(add(1,2).toBe(4));
+    expect(add(1,2)).to.eql(4);
   })
 })
 describe ("Basic Querying", () => {
