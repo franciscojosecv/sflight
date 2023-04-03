@@ -4,7 +4,7 @@ class TravelService extends cds.ApplicationService {
 init() {
 
   /**
-   * Reflect definitions from the service's CDS model
+   * Reflect definitions from the service's CDS model and test it
    */
   const { Travel, Booking, BookingSupplement } = this.entities
 
